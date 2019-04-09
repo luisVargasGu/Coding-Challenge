@@ -1,3 +1,61 @@
-<p>
-  payment works!
-</p>
+<div id="card">
+  <h3>Transaction</h3>
+  <div class="input-group">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="bitcoin1">Address</span>
+    </div>
+    <input
+      type="text"
+      class="form-control"
+      id="sender-input"
+      aria-describedby="bitcoin1"
+      [(ngModel)]="sender"
+      placeholder="Sender Address"
+    />
+  </div>
+  <div class="input-group">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="bitcoin2">Address</span>
+    </div>
+    <input
+      type="text"
+      class="form-control"
+      id="reciever-input"
+      aria-describedby="bitcoin2"
+      [(ngModel)]="reciever"
+      placeholder="Reciever Address"
+    />
+  </div>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text">&#8383;</span>
+    </div>
+    <input
+      type="text"
+      class="form-control"
+      id="amount-input"
+      aria-label="Ammount to send in satoshis"
+      [(ngModel)]="amount"
+      placeholder="Satoshis to send"
+    />
+    <div class="input-group-append">
+      <span class="input-group-text">in satoshis</span>
+    </div>
+  </div>
+  <button type="button" class="btn btn-dark center btn-block">Make Transaction</button>
+  <!-- <div class="container-fluid">
+      <ul *ngIf="addrsData" class="list-group">
+        <div class="addrs-info">
+          <br />
+          <h4>Balance: &#8383; {{ addrsData.final_balance }}</h4>
+        </div>
+        <h5>Transactions:</h5>
+        <li class="list-group-item" *ngFor="let transaction of txData">
+          <dl>
+            <dt>Confirmation date: {{ transaction.confirmed }}</dt>
+            <dd>The past balance: &#8383; {{ transaction.ref_balance }}</dd>
+          </dl>
+        </li>
+      </ul>
+    </div> -->
+</div>
