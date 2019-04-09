@@ -1,0 +1,23 @@
+$primary: rgb(225, 225, 225);
+$accent: #fff;
+
+$padding: 15px;
+$borders: 15px;
+$width: 800px;
+
+.greybox {
+  background: color(accent);
+  padding: 20px;
+  margin-top: 5px;
+  text-align: left;
+  border-radius: $borders;
+  overflow-y: scroll;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  height: 400px;
+}
+
+div#card {
+  ul {
+    list-style-type: none;
+  }
+}
