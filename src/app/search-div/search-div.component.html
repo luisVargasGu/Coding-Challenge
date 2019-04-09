@@ -1,3 +1,31 @@
-<p>
-  search-div works!
-</p>
+<div class="greybox" id="card">
+  <div class="input-group">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="bitcoin1">&#8383;</span>
+    </div>
+    <input
+    type="text"
+    class="form-control"
+    aria-describedby="bitcoin1"
+    (keyup.enter)="searchAddress()"
+    [(ngModel)]="address"
+    placeholder="Search by address"
+  />
+  </div>
+  
+  <div>
+    <ul *ngIf="addrsData" class="list-group">
+      <div class="addrs-info">
+        <br />
+        <h4>Balance: &#8383; {{ addrsData.final_balance }}</h4>
+      </div>
+      <h5>Transactions:</h5>
+      <li class="list-group-item" *ngFor="let transaction of txData">
+        <dl>
+          <dt>Confirmation date: {{ transaction.confirmed }}</dt>
+          <dd>The past balance: &#8383; {{ transaction.ref_balance }}</dd>
+        </dl>
+      </li>
+    </ul>
+  </div>
+</div>
